@@ -1,0 +1,24 @@
+.heading{
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    
+}
+.block{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: yellow;
+    margin-left:250px;
+    margin-right:250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+}
+.button{
+    width:200px;
+    height: 50px;
+    margin-top:39px;
+    border-radius: 30px;
+
+}
