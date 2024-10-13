@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="sheet.css">
+    <script src="script.js"></script>
+    <style>
+        .hid{
+            display: none;
+        }
+
+
+
+    </style>
     
 </head>
 <body bgcolor="purple">
     <div class="block">
         <h1 id="heading">Track Your Reps and Time Efficiently </h1>
-        <button>Begin Workout  &#9658</button>
+        <button id="btn1" onclick="show()">Begin Workout  &#9658</button>
+        <script>
+            function show(){
+                document.getElementById("btn1").style.display="none";
+                document.getElementsByClassName("hid").style.display="block";
+            }
+        </script>
     </div>
-    <main>
         <div class="block1">
-            <label></label>
-            <input type="text" id="Textbox" placeholder="Input Exercise">
+            <label for="exerciseName"></label>
+            <input type="text" class="Textbox" placeholder="Input Exercise">
+            <label for="exerciseTime"></label>
+            <input type="text" class="Textbox" placeholder="Specify time 00Hr:00Min:00Sec">
+            <button class="newbut">Add To Workout Plan</button>
+            <script>
+    
+            </script>
         </div>
-    </main>
    </body>
 </html>
