@@ -16,10 +16,13 @@
     </div>
         <div class="block1">
             <label for="exerciseName"></label>
-            <input type="text" class="Textbox" placeholder="Input Exercise">
+            <input type="text" id="Textbox" class="input" placeholder="Input Exercise">
             <label for="exerciseTime"></label>
-            <input type="text" class="Textbox" placeholder="Specify time 00Hr:00Min:00Sec">
-            <button class="newbut">Add To Workout Plan</button>
+            <input type="text" id="Timebox" class="input" placeholder="Specify time 00Hr:00Min:00Sec">
+            <button class="newbut" onclick="addexercise()" id="Workoutadd">Add To Workout Plan</button>
+        </div>
+        <div>
+            <h2 id="output"></h2>
         </div>
    </body>
 </html>
