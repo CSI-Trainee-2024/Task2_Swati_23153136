@@ -9,7 +9,7 @@ let remainingTimes = [];
 let isPaused = [];
 
 function show() {
-    document.getElementById("btn1").style.display = "none";
+    /*document.getElementById("btn1").style.display = "none";*/
     document.getElementById("stopwatch").style.display = "block";
 }
 

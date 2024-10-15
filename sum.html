@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="sumcss.css">
     <script>
         window.onload = function() {
-            const data = JSON.parse(localStorage.getItem('sessionData'));
+            const data = JSON.parse(localStorage.getItem('exerciseSummary')) || [];
             const table = document.getElementById('summaryTable');
 
             data.forEach(exercise => {

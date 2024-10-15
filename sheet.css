@@ -1,75 +1,66 @@
-.heading {
+body {
+    background-color: lavender;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
     text-align: justify;
     padding: 20px;
     border-radius: 30px;
 }
 
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .block {
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding: 50px;
-    background-color:indigo;
-    margin-left: 250px;
-    margin-right: 250px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    background-color: indigo;
+    margin: 20px 0;
     border-radius: 20px;
-    margin-top: 125px;
-    color:white;
+    color: white;
 }
 
 button {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 50px;
-    margin-top: 15px;
-    margin-bottom: 50px;
-    margin-left: 20px;
+    margin: 15px 0;
     border-radius: 30px;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     color: white;
-    border: none; 
-    transition: background-color 0.3s ease; 
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green */
+    background-color: #45a049;
     box-shadow: 20px 5px 20px black;
-    cursor: pointer;
 }
 
 .block1 {
-    display: inline-block;
-    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     background-color: white;
-    margin-left: 250px;
-    margin-right: 250px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    margin: 20px 0;
     border-radius: 20px;
-    margin-top: 90px;
 }
 
 #Textbox, #Timebox {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
-    margin-left: 5px;
-    margin-top: 20px;
+    margin: 10px ;
     font-size: 20px;
-    margin-right: 10px;
-}
-
-.newbut {
-    width: 250px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-#stopwatch {
-    display: none;
-    margin-left: 30px;
 }
 
 #output {
@@ -78,6 +69,8 @@ button:hover {
     text-align: center;
     font-size: 30px;
     background-color: azure;
+    padding: 10px;
+    margin: 20px 0;
 }
 
 #endblock {
@@ -86,9 +79,37 @@ button:hover {
 }
 
 button.pause {
-    background-color: #f44336; /* Red */
+    background-color: #f44336; 
 }
 
 button.pause:hover {
-    background-color: #da190b; /* Darker red */
+    background-color: #da190b; 
+}
+
+@media (max-width: 768px) {
+    .block, .block1 {
+        padding: 20px;
+    }
+    
+    button {
+        width: 90%;
+    }
+    
+    h1 {
+        font-size: 24px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; 
+    }
+
+    #Textbox, #Timebox {
+        max-width: 90%; 
+    }
+
+    #output {
+        font-size: 24px; 
+    }
 }
