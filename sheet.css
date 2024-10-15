@@ -1,80 +1,82 @@
-.heading{
+.heading {
     text-align: justify;
     padding: 20px;
     border-radius: 30px;
-
-    
 }
-.block{
+.block {
     display: flex;
     justify-content: center;
     padding: 50px;
     background-color: yellow;
-    margin-left:250px;
-    margin-right:250px;
+    margin-left: 250px;
+    margin-right: 250px;
     padding-top: 10px;
     padding-bottom: 5px;
     border-radius: 20px;
     margin-top: 125px;
 }
-button{
-    width:200px;
+button {
+    width: 200px;
     height: 50px;
-    margin-top:15px;
+    margin-top: 15px;
     margin-bottom: 50px;
-    margin-left:20px;
+    margin-left: 20px;
     border-radius: 30px;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom:10px;
-
+    margin-bottom: 10px;
 }
-button:hover{
+button:hover {
     box-shadow: 20px 5px 20px black;
-    cursor:pointer;
-    
+    cursor: pointer;
 }
-.block1{
+.block1 {
     display: inline-block;
     padding-left: 50px;
     background-color: white;
-    margin-left:250px;
-    margin-right:250px;
+    margin-left: 250px;
+    margin-right: 250px;
     padding-top: 10px;
     padding-bottom: 20px;
     border-radius: 20px;
     margin-top: 90px;
-
 }
-#Textbox,#Timebox{
-    width:300px;
-    height:40px;
-    margin-left:5px;
-    margin-top:20px;
+#Textbox, #Timebox {
+    width: 300px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 20px;
     font-size: 20px;
-    margin-right:10px;
+    margin-right: 10px;
 }
-.newbut{
+.newbut {
     width: 250px;
-    margin-left:10px;
-    margin-right:10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-#stopwatch{
+#stopwatch {
     display: none;
-    margin-left:30px;
+    margin-left: 30px;
 }
-    
-#output{
-    display:block;
+#output {
+    display: block;
     justify-content: center;
     text-align: center;
     font-size: 30px;
     background-color: azure;
 }
-#endblock{
-    display:flex;
-    justify-content:center;
+#endblock {
+    display: flex;
+    justify-content: center;
     margin-top: 500px;
-
-
+}
+table {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
 }

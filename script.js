@@ -2,17 +2,18 @@ let sec = 0;
 let min = 0;
 let hr = 0;
 let timer = false;
-let exercises = []; 
+let exercises = [];
 let currentExerciseIndex = 0; 
-let countdownTimers = []; 
+let countdownTimers = [];
 let remainingTimes = []; 
-let isPaused = []; 
+let isPaused = [];
+
 function show() {
     document.getElementById("btn1").style.display = "none";
     document.getElementById("stopwatch").style.display = "block";
 
     if (!timer) {
-        timer = true;  
+        timer = true; 
         startStopwatch(); 
     }
 }
@@ -78,7 +79,7 @@ function formatTime(totalSeconds) {
 }
 
 function startWorkout() {
-    currentExerciseIndex = 0; 
+    currentExerciseIndex = 0;
     show(); 
     startExercise(currentExerciseIndex); 
 }
@@ -95,40 +96,46 @@ function startExercise(index) {
         const countdownElement = document.getElementById(`countdown-${index}`);
         countdownElement.innerHTML = formatTime(remainingTimes[index]); 
 
-        
         countdownTimers[index] = setInterval(() => {
             if (remainingTimes[index] <= 0) {
                 clearInterval(countdownTimers[index]);
                 alert(`${exercises[index].name} time is up!`);
                 currentExerciseIndex++;
-               
                 startExercise(currentExerciseIndex);
             } else if (!isPaused[index]) {
-                remainingTimes[index]--;
+                remainingTimes[index]--; 
                 countdownElement.innerHTML = formatTime(remainingTimes[index]);
             }
-        }, 1000); 
+        }, 1000);
     }
 }
 
 function pauseExercise(index) {
     if (isPaused[index]) {
-        
         isPaused[index] = false;
         alert(`Resumed: ${exercises[index].name}.`);
         startExercise(index); 
     } else {
-        
-        clearInterval(countdownTimers[index]); 
+        clearInterval(countdownTimers[index]);
         isPaused[index] = true;
         alert(`Paused: ${exercises[index].name}. You can resume later.`);
     }
     
-    
+    if (isPaused[index]) {
+        timer = false; 
+    } else {
+        timer = true; 
+    }
+
     displayExercises();
 }
 
 function validateTime(time) {
     const regex = /^\d{2}:\d{2}:\d{2}$/; 
     return regex.test(time);
+}
+
+function endSession() {
+    localStorage.setItem('sessionData', JSON.stringify(exercises));
+    window.location.href = 'sum.html';
 }
