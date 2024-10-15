@@ -3,18 +3,21 @@
     padding: 20px;
     border-radius: 30px;
 }
+
 .block {
     display: flex;
     justify-content: center;
     padding: 50px;
-    background-color: yellow;
+    background-color:indigo;
     margin-left: 250px;
     margin-right: 250px;
     padding-top: 10px;
     padding-bottom: 5px;
     border-radius: 20px;
     margin-top: 125px;
+    color:white;
 }
+
 button {
     width: 200px;
     height: 50px;
@@ -25,11 +28,18 @@ button {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none; 
+    transition: background-color 0.3s ease; 
 }
+
 button:hover {
+    background-color: #45a049; /* Darker green */
     box-shadow: 20px 5px 20px black;
     cursor: pointer;
 }
+
 .block1 {
     display: inline-block;
     padding-left: 50px;
@@ -41,6 +51,7 @@ button:hover {
     border-radius: 20px;
     margin-top: 90px;
 }
+
 #Textbox, #Timebox {
     width: 300px;
     height: 40px;
@@ -49,15 +60,18 @@ button:hover {
     font-size: 20px;
     margin-right: 10px;
 }
+
 .newbut {
     width: 250px;
     margin-left: 10px;
     margin-right: 10px;
 }
+
 #stopwatch {
     display: none;
     margin-left: 30px;
 }
+
 #output {
     display: block;
     justify-content: center;
@@ -65,18 +79,16 @@ button:hover {
     font-size: 30px;
     background-color: azure;
 }
+
 #endblock {
     display: flex;
     justify-content: center;
-    margin-top: 500px;
 }
-table {
-    width: 100%;
-    text-align: left;
-    font-size: 20px;
+
+button.pause {
+    background-color: #f44336; /* Red */
 }
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 10px;
+
+button.pause:hover {
+    background-color: #da190b; /* Darker red */
 }
